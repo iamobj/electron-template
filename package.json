@@ -1,0 +1,55 @@
+{
+  "name": "electron-template",
+  "version": "1.0.0",
+  "description": "electron开发模板",
+  "author": "iamobj",
+  "homepage": "https://electron-vite.org",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "format": "eslint --fix .",
+    "lint": "eslint --cache .",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "dev:watch": "electron-vite dev --watch",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "pnpm run build && electron-builder --dir",
+    "build:win": "pnpm run build && electron-builder --win",
+    "build:mac": "pnpm run build && electron-builder --mac",
+    "build:linux": "pnpm run build && electron-builder --linux",
+    "vue-devtools": "./node_modules/.bin/vue-devtools"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron-toolkit/utils": "^4.0.0",
+    "electron-log": "^5.3.3",
+    "electron-updater": "^6.3.9",
+    "naive-ui": "^2.41.0",
+    "pinia": "^3.0.2",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.12.0",
+    "@unocss/eslint-plugin": "66.1.0-beta.10",
+    "@unocss/preset-rem-to-px": "66.1.0-beta.10",
+    "@unocss/transformer-directives": "66.1.0-beta.10",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/devtools": "^7.7.2",
+    "code-inspector-plugin": "^0.20.7",
+    "electron": "^35.0.3",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.1.0",
+    "eslint": "^9.24.0",
+    "unocss": "66.1.0-beta.10",
+    "unplugin-auto-import": "^19.1.2",
+    "unplugin-vue-components": "^28.4.1",
+    "vite": "^6.2.3",
+    "vue": "^3.5.13"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "esbuild"
+    ]
+  }
+}

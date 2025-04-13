@@ -1,6 +1,7 @@
 import { electronApp, optimizer } from '@electron-toolkit/utils'
-import { app } from 'electron'
+import { app, Menu } from 'electron'
 import icon from '../../resources/icon.png?asset'
+import { createMainMenu } from './app/menu'
 import { createMainWindow } from './app/window'
 import { registerIpcHandlers } from './ipcs'
 
@@ -23,6 +24,9 @@ app.whenReady().then(() => {
 
   // 初始化应用
   initApp()
+
+  // 设置应用菜单
+  Menu.setApplicationMenu(createMainMenu())
 
   // 注册IPC处理程序
   registerIpcHandlers()

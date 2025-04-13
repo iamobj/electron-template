@@ -40,9 +40,12 @@ export function createMainWindow(icon) {
   if (is.dev && process.env.ELECTRON_RENDERER_URL) {
     mainWindow.webContents.openDevTools({ mode: 'detach' })
     mainWindow.loadURL(process.env.ELECTRON_RENDERER_URL)
-    // 注册快捷键 打开开发者工具
-    globalShortcut.register('CommandOrControl+Shift+I', () => {
-      mainWindow.webContents.openDevTools({ mode: 'detach' })
+    // 注册mac快捷键 打开开发者工具
+    globalShortcut.register('Alt+Command+I', () => {
+      if (mainWindow.webContents.isDevToolsOpened())
+        mainWindow.webContents.closeDevTools()
+      else
+        mainWindow.webContents.openDevTools({ mode: 'detach' })
     })
   }
   else {

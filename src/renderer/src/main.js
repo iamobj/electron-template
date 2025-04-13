@@ -8,8 +8,8 @@ import './assets/styles/index.css'
 
 async function bootstrap() {
   if (import.meta.env.VITE_APP_ENV === 'development') {
-    const { devtools } = await import('@vue/devtools')
-    devtools.connect()
+    // const { devtools } = await import('@vue/devtools')
+    // devtools.connect()
   }
 
   const app = createApp(App)

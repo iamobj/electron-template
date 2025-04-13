@@ -6,6 +6,7 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode)
@@ -59,6 +60,9 @@ export default defineConfig(({ mode }) => {
           dirs: [
             './src/components',
           ],
+        }),
+        vueDevTools({
+          launchEditor: 'trae',
         }),
         codeInspectorPlugin({
           bundler: 'vite',

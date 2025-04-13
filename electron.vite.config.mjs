@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@renderer': resolve('src/renderer/src'),
+          '@': resolve('src'),
         },
       },
       plugins: [
@@ -36,7 +37,7 @@ export default defineConfig(({ mode }) => {
             'vue-router',
             'pinia',
             {
-              'naive-ui': ['useMessage', 'useDialog'],
+              'naive-ui': ['useMessage', 'useDialog', 'NIcon'],
               'alova': ['useRequest'],
               '@alova/scene-vue': [['useForm', 'useAlovaForm']],
               'dayjs': [['default', 'dayjs']],

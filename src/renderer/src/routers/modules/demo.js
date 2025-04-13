@@ -1,7 +1,10 @@
 export default [
   {
-    path: '/demo',
-    name: 'Demo',
+    path: 'demo',
+    name: 'demo',
     component: () => import('@renderer/views/demo.vue'),
+    meta: {
+      leftMenuSelectedKey: 'demo',
+    }
   },
 ]

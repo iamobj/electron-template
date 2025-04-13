@@ -1,0 +1,35 @@
+@import './variable.css';
+
+/* 滚动条整体样式 */
+::-webkit-scrollbar {
+  width: 5px; /* 滚动条宽度 */
+  height: 5px; /* 滚动条高度 */
+}
+
+/* 滚动条轨道样式 */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* 滚动条背景色，这里是半透明的灰色 */
+  border-radius: 4px; /* 滚动条轨道的圆角 */
+}
+
+/* 滚动条滑块样式 */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4); /* 滑块颜色，这里是半透明的黑色 */
+  border-radius: 4px; /* 滑块的圆角 */
+}
+
+/* 滚动条滑块悬停样式 */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.6); /* 悬停时的颜色 */
+}
+
+/* 滚动条按钮样式（向上和向下按钮） */
+::-webkit-scrollbar-button {
+  display: none; /* 隐藏按钮 */
+}
+
+/* 覆盖@unocss/reset/sanitize/sanitize.css */
+/* 导致 naiveui svg 图标没有垂直对齐，这里覆盖它的 vertical-align: middle; */
+:where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: baseline !important;
+}

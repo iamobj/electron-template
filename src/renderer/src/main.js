@@ -2,7 +2,8 @@ import App from './App.vue'
 import { registerRouter } from './routers'
 import store from './stores'
 import 'virtual:uno.css'
-// import '@unocss/reset/sanitize/sanitize.css'
+import '@unocss/reset/sanitize/sanitize.css'
+import '@unocss/reset/sanitize/assets.css'
 import './assets/styles/index.css'
 
 async function bootstrap() {

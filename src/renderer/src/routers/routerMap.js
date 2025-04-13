@@ -17,13 +17,30 @@ Object.keys(modules).forEach((key) => {
   routes.push(...modRoutesList)
 })
 
+const layoutRoute = {
+  path: '/',
+  name: 'layout',
+  component: () => import('@renderer/layout/index.vue'),
+  children: [
+    {
+      path: 'home',
+      name: 'home',
+      component: () => import('@renderer/views/home.vue'),
+      meta: {
+        leftMenuSelectedKey: 'home',
+      }
+    },
+    ...routes,
+  ],
+}
+
 export default [
   {
     path: '/',
-    name: 'Root',
+    name: 'root',
     redirect: {
-      name: 'Demo',
+      name: 'home',
     },
   },
-  ...routes,
+  layoutRoute,
 ]

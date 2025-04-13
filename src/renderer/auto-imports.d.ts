@@ -9,6 +9,7 @@ declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const ILocalStorage: typeof import('@renderer/utils/storage')['ILocalStorage']
   const ISessionStorage: typeof import('@renderer/utils/storage')['ISessionStorage']
+  const NIcon: typeof import('naive-ui')['NIcon']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const apis: typeof import('@renderer/apis')['default']
   const computed: typeof import('vue')['computed']

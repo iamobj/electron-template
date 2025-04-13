@@ -14,6 +14,12 @@ importers:
       '@electron-toolkit/utils':
         specifier: ^4.0.0
         version: 4.0.0(electron@35.1.5)
+      '@unocss/reset':
+        specifier: 66.1.0-beta.11
+        version: 66.1.0-beta.11
+      '@vicons/tabler':
+        specifier: ^0.13.0
+        version: 0.13.0
       electron-log:
         specifier: ^5.3.3
         version: 5.3.3
@@ -932,6 +938,9 @@ packages:
   '@unocss/reset@66.1.0-beta.10':
     resolution: {integrity: sha512-B3Xd1jjtzsifpeoFWrtKO+7yjdx0S/lHaaDtAoPxHe8RmQBbjFSWpVV7ohRCEzuZwG0gLJHh5lV+lP70CyFJaw==}
 
+  '@unocss/reset@66.1.0-beta.11':
+    resolution: {integrity: sha512-DTjGQGE7tyNQfFjNooMYxrVP911Wt9i/S3CjQPOXLbTxgBeiXr528nLkoym14DQW6LVcvv9PJzLr3ls64MsioQ==}
+
   '@unocss/rule-utils@66.1.0-beta.10':
     resolution: {integrity: sha512-yGC8uQT6ErjLsWMU3Nx7mjvftYukLL+TELM+pmYOFmbhasrdnnJI1kT/04dyUHQTlm3XCs8I7LhbYaVz7MmIXA==}
     engines: {node: '>=14'}
@@ -1027,6 +1036,9 @@ packages:
     resolution: {integrity: sha512-hVXaObGI2lGFmrtT77KSbPQ3I+zk9IU500wobjk0+oX59vg/0VqAzABNtt3YSQYgXTC2a/LYxekLfND/wlt0yQ==}
     cpu: [x64]
     os: [win32]
+
+  '@vicons/tabler@0.13.0':
+    resolution: {integrity: sha512-AykuhiqjszkIoAL/7knIFm6RDOBS1ZmQdJfQ+RNLEah0fVsxykUFCfMBSNZh8lOzC85EtdD1k5g/sv5GYk0Ohg==}
 
   '@vitejs/plugin-vue@5.2.3':
     resolution: {integrity: sha512-IYSLEQj4LgZZuoVpdSUCw3dIynTWQgPlaRP6iAvMle4My0HdYwr5g5wQAfwOeHQBmYwEkqF70nRpSilr6PoUDg==}
@@ -4701,6 +4713,8 @@ snapshots:
 
   '@unocss/reset@66.1.0-beta.10': {}
 
+  '@unocss/reset@66.1.0-beta.11': {}
+
   '@unocss/rule-utils@66.1.0-beta.10':
     dependencies:
       '@unocss/core': 66.1.0-beta.10
@@ -4784,6 +4798,8 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.4.1':
     optional: true
+
+  '@vicons/tabler@0.13.0': {}
 
   '@vitejs/plugin-vue@5.2.3(vite@6.2.6(@types/node@22.14.0)(jiti@2.4.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))':
     dependencies:

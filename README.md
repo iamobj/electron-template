@@ -9,6 +9,7 @@
 - 内置UnoCSS，支持原子化CSS；naive-ui框架；pinia；vue-router
 - 已封装主线程日志工具函数
 - 渲染层自动导入配置；开发环境点击DOM，自动打开IDE定位至源代码位置；vue开发工具
+- 页面layout框架
 
 ## 快速开始
 
@@ -16,6 +17,13 @@
 
 - Node.js 22.14.0
 - pnpm 10.8.0
+
+### 开发
+
+复制模板后需要修改的地方：
+
+- 项目搜索修改 `electron-template` 、`com.iamc.template`字符串
+- 修改`package.json`里的`productName`、`description` 等字段
 
 ### 项目设置
 

@@ -15,7 +15,7 @@ function initApp() {
 
 app.whenReady().then(() => {
   // 设置应用ID
-  electronApp.setAppUserModelId('com.iamc.startrade')
+  electronApp.setAppUserModelId('com.iamc.template')
 
   // 监听窗口创建事件
   app.on('browser-window-created', (_, window) => {

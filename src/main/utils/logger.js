@@ -80,7 +80,7 @@ function getLogger(category = 'main', opts = {}) {
  * businessLogger.info('业务日志')
  * businessLogger.warn('业务警告')
  */
-const loggerFactory = {
+const logger = {
   getLogger, // getLogger('business')
   info(category, ...args) { getLogger(category).info(...args) },
   warn(category, ...args) { getLogger(category).warn(...args) },
@@ -93,4 +93,4 @@ const loggerFactory = {
   },
 }
 
-export default loggerFactory
+export default logger

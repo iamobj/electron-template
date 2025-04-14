@@ -42,6 +42,7 @@ function cleanOldLogs(category, keepDays = DEFAULT_KEEP_DAYS) {
  * 获取/创建指定类别的日志实例
  * @param {string} category 日志类型(如：main/business/audit)
  * @param {object} opts { maxSize, keepDays }
+ * @returns {log.LogFunctions}
  */
 function getLogger(category = 'main', opts = {}) {
   if (loggers[category])

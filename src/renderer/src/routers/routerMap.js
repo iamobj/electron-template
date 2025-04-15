@@ -28,7 +28,7 @@ const layoutRoute = {
       component: () => import('@renderer/views/home.vue'),
       meta: {
         leftMenuSelectedKey: 'home',
-      }
+      },
     },
     ...routes,
   ],

@@ -6,14 +6,14 @@
 /**
  * 获取日志实例
  * @param {string} category 日志类别
- * @returns {Object} 日志实例
+ * @returns {object} 日志实例
  */
 export function getLogger(category = 'renderer') {
   return {
     info: (...args) => window.electron.ipcRenderer.invoke('logger:info', category, ...args),
     warn: (...args) => window.electron.ipcRenderer.invoke('logger:warn', category, ...args),
     error: (...args) => window.electron.ipcRenderer.invoke('logger:error', category, ...args),
-    debug: (...args) => window.electron.ipcRenderer.invoke('logger:debug', category, ...args)
+    debug: (...args) => window.electron.ipcRenderer.invoke('logger:debug', category, ...args),
   }
 }
 
@@ -25,7 +25,7 @@ const logger = {
   info: (category, ...args) => window.electron.ipcRenderer.invoke('logger:info', category, ...args),
   warn: (category, ...args) => window.electron.ipcRenderer.invoke('logger:warn', category, ...args),
   error: (category, ...args) => window.electron.ipcRenderer.invoke('logger:error', category, ...args),
-  debug: (category, ...args) => window.electron.ipcRenderer.invoke('logger:debug', category, ...args)
+  debug: (category, ...args) => window.electron.ipcRenderer.invoke('logger:debug', category, ...args),
 }
 
 export default logger

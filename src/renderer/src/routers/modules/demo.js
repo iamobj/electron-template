@@ -5,6 +5,6 @@ export default [
     component: () => import('@renderer/views/demo.vue'),
     meta: {
       leftMenuSelectedKey: 'demo',
-    }
+    },
   },
 ]

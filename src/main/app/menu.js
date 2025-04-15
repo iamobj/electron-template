@@ -1,3 +1,4 @@
+import { is } from '@electron-toolkit/utils'
 import { app, BaseWindow, Menu } from 'electron'
 
 const isMac = process.platform === 'darwin'
@@ -44,6 +45,21 @@ export function createMainMenu() {
             BaseWindow.getFocusedWindow()?.webContents.reload()
           },
         },
+        ...(is.dev
+          ? [{
+              label: '切换开发者工具',
+              accelerator: isMac ? 'Alt+Command+I' : 'F12',
+              click: () => {
+                const focusedWindow = BaseWindow.getFocusedWindow()
+                if (focusedWindow) {
+                  if (focusedWindow.webContents.isDevToolsOpened())
+                    focusedWindow.webContents.closeDevTools()
+                  else
+                    focusedWindow.webContents.openDevTools({ mode: 'detach' })
+                }
+              },
+            }]
+          : []),
       ],
     },
   ]

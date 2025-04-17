@@ -24,6 +24,7 @@
 
 - 项目搜索修改 `electron-template` 、`com.iamc.template`字符串
 - 修改`package.json`里的`productName`、`description` 等字段
+- 文件命名统一使用中线
 
 ### 项目设置
 

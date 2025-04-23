@@ -62,6 +62,31 @@ export function createMainMenu() {
           : []),
       ],
     },
+    {
+      label: '编辑',
+      submenu: [
+        {
+          label: '复制',
+          accelerator: 'CmdOrCtrl+C',
+          role: 'copy',
+        },
+        {
+          label: '剪切',
+          accelerator: 'CmdOrCtrl+X',
+          role: 'cut',
+        },
+        {
+          label: '粘贴',
+          accelerator: 'CmdOrCtrl+V',
+          role: 'paste',
+        },
+        {
+          label: '全选',
+          accelerator: 'CmdOrCtrl+A',
+          role: 'selectAll',
+        },
+      ],
+    },
   ]
 
   return Menu.buildFromTemplate(template)
